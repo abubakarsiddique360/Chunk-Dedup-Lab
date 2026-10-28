@@ -1,0 +1,185 @@
+{
+  "base_kib": 256,
+  "compare": [
+    {
+      "label": "fixed 4 KiB",
+      "total_bytes": 1577273,
+      "chunk_count": 387,
+      "unique_chunks": 227,
+      "unique_bytes": 921913,
+      "avg_chunk": 4075.64,
+      "ratio": 0.5845,
+      "reuse": 0.4155
+    },
+    {
+      "label": "cdc 2^10",
+      "total_bytes": 1577273,
+      "chunk_count": 1918,
+      "unique_chunks": 331,
+      "unique_bytes": 274314,
+      "avg_chunk": 822.35,
+      "ratio": 0.1739,
+      "reuse": 0.8261
+    },
+    {
+      "label": "cdc 2^12",
+      "total_bytes": 1577273,
+      "chunk_count": 408,
+      "unique_chunks": 76,
+      "unique_bytes": 310118,
+      "avg_chunk": 3865.87,
+      "ratio": 0.1966,
+      "reuse": 0.8034
+    },
+    {
+      "label": "cdc 2^14",
+      "total_bytes": 1577273,
+      "chunk_count": 138,
+      "unique_chunks": 38,
+      "unique_bytes": 445385,
+      "avg_chunk": 11429.51,
+      "ratio": 0.2824,
+      "reuse": 0.7176
+    }
+  ],
+  "insertions": [
+    {
+      "insert": 1,
+      "fixed_reuse": 0.0,
+      "cdc_reuse": 0.9748,
+      "fixed_chunks": 65,
+      "cdc_chunks": 68
+    },
+    {
+      "insert": 16,
+      "fixed_reuse": 0.0,
+      "cdc_reuse": 0.9748,
+      "fixed_chunks": 65,
+      "cdc_chunks": 68
+    },
+    {
+      "insert": 64,
+      "fixed_reuse": 0.0,
+      "cdc_reuse": 0.9746,
+      "fixed_chunks": 65,
+      "cdc_chunks": 68
+    },
+    {
+      "insert": 256,
+      "fixed_reuse": 0.0,
+      "cdc_reuse": 0.9739,
+      "fixed_chunks": 65,
+      "cdc_chunks": 68
+    },
+    {
+      "insert": 4096,
+      "fixed_reuse": 0.9692,
+      "cdc_reuse": 0.9598,
+      "fixed_chunks": 65,
+      "cdc_chunks": 69
+    }
+  ],
+  "edits": [
+    {
+      "edit": "insert 1 B at 1 KiB",
+      "fixed_reuse": 0.0,
+      "cdc_reuse": 0.9748,
+      "fixed_new_chunks": 65,
+      "cdc_new_chunks": 1
+    },
+    {
+      "edit": "insert 512 B at 40 KiB",
+      "fixed_reuse": 0.1559,
+      "cdc_reuse": 0.9749,
+      "fixed_new_chunks": 55,
+      "cdc_new_chunks": 1
+    },
+    {
+      "edit": "delete 200 B at 90 KiB",
+      "fixed_reuse": 0.344,
+      "cdc_reuse": 0.973,
+      "fixed_new_chunks": 42,
+      "cdc_new_chunks": 1
+    },
+    {
+      "edit": "append 4 KiB",
+      "fixed_reuse": 0.9846,
+      "cdc_reuse": 0.9621,
+      "fixed_new_chunks": 1,
+      "cdc_new_chunks": 1
+    },
+    {
+      "edit": "move 4 KiB block",
+      "fixed_reuse": 1.0,
+      "cdc_reuse": 0.9328,
+      "fixed_new_chunks": 0,
+      "cdc_new_chunks": 4
+    }
+  ],
+  "sizes": [
+    {
+      "target": 512,
+      "fixed_count": 512,
+      "cdc_count": 572,
+      "cdc_avg": 458.3,
+      "cdc_min": 132,
+      "cdc_max": 1963
+    },
+    {
+      "target": 1024,
+      "fixed_count": 256,
+      "cdc_count": 320,
+      "cdc_avg": 819.2,
+      "cdc_min": 262,
+      "cdc_max": 4096
+    },
+    {
+      "target": 2048,
+      "fixed_count": 128,
+      "cdc_count": 226,
+      "cdc_avg": 1159.9,
+      "cdc_min": 523,
+      "cdc_max": 5935
+    },
+    {
+      "target": 4096,
+      "fixed_count": 64,
+      "cdc_count": 91,
+      "cdc_avg": 2880.7,
+      "cdc_min": 1069,
+      "cdc_max": 10533
+    },
+    {
+      "target": 8192,
+      "fixed_count": 32,
+      "cdc_count": 65,
+      "cdc_avg": 4033.0,
+      "cdc_min": 2058,
+      "cdc_max": 11497
+    },
+    {
+      "target": 16384,
+      "fixed_count": 16,
+      "cdc_count": 41,
+      "cdc_avg": 6393.8,
+      "cdc_min": 4210,
+      "cdc_max": 15216
+    },
+    {
+      "target": 32768,
+      "fixed_count": 8,
+      "cdc_count": 20,
+      "cdc_avg": 13107.2,
+      "cdc_min": 8666,
+      "cdc_max": 18971
+    },
+    {
+      "target": 65536,
+      "fixed_count": 4,
+      "cdc_count": 10,
+      "cdc_avg": 26214.4,
+      "cdc_min": 16639,
+      "cdc_max": 39090
+    }
+  ]
+}
